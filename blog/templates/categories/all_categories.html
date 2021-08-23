@@ -1,0 +1,25 @@
+{% extends 'layouts/layout.html' %}
+
+
+{% block content %}
+
+<div class="row">
+
+
+    {% for category in all_categories %}
+        <div class="col-sm-6">
+            <div class="card m-2">
+                <div class="card-body">
+                    <h5 class="card-title">{{category.name}}</h5>
+                    <p class="card-text">{{category.description}}</p>
+                    <a href=" {% url 'category' category.id %} " class="btn btn-primary btn-sm">Ver categoria</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+        <div class="col-6 formu-create-article">
+            <h3 class="text-center">Iniciar sesión</h3>
+            <form  method="POST">
+                {% csrf_token %}
+
+                <div class="ml-4 col-12 form-group">
+                    <label for="title" class="mr-2">Usuario: </label>
+                    <input type="text" name="username" class="form-control" required placerholder="Nombre de usuario">
+                </div>
+
+                <div class="ml-4 col-12 form-group">
+                    <label for="title" class="mr-2">Contraseña: </label>
+                    <input type="password" name="contraseña" class="form-control" required placerholder="Contraseña">
+                </div>
+
+                <div class="col d-flex justify-content-center mb-2">
+                    <button class="btn btn-sm " type="submit"> <i class="fas fa-sign-in-alt"></i> Iniciar
+                        sesión</button>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <p>¿No tienes cuenta? <a href=" {% url 'register' %} ">Registrate</a></p>
+                
+                </div>
+       
+
+            </form>
+        </div>
+
+
+
+</div>
+{% endblock content %}

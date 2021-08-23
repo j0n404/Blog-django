@@ -1,0 +1,34 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+
+        {% if articles.has_previous %}
+        <li class="page-item ">
+            <a class="page-link" href="?page=1" tabindex="-1" aria-disabled="true">Primera</a>
+        </li>
+        <a class="page-link" href="?page={{articles.previous_page_number}}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+
+        {% endif %}
+
+
+
+            <li class="page-item"><a class="page-link" href="#">{{articles.number}}</a></li>
+        
+
+        {% if articles.has_next %}
+
+        <a class="page-link" href="?page={{articles.next_page_number}}" aria-label="Previous">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+
+        <li class="page-item ">
+            <a class="page-link" href="?page={{articles.paginator.num_pages}} " tabindex="-1"
+                aria-disabled="true">Última</a>
+        </li>
+        {% endif %}
+
+
+
+    </ul>
+</nav>

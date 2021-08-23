@@ -1,0 +1,74 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title %}
+{{title}}
+{% endblock title %}
+
+
+
+{% block content %}
+<div class="row d-lg-flex justify-content-md-center formu-create-article">
+
+
+
+    {% if register_form.errors %}
+    <div class="col-lg-4 col-md-8 col-12 ">
+        <div class="alert alert-danger" role="alert">
+            Hay errores en el formulario
+            {{register_form.errors}}
+        </div>
+    </div>
+
+    {% endif %}
+
+
+    <div class="col-lg-6 col-md-8 col-12 box">
+
+
+        <h3 class="text-center">Registrarse</h3>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {% for field in register_form %}
+            <div class="col ml-3">
+                <label for="">{{field.label}}</label>
+            </div>
+
+
+
+            <div class="col ml-3 mb-1">
+                {{field}}
+            </div>
+
+            <div class="w-100"></div>
+            {% endfor %}
+
+            {% comment %} <div class="col-12 form-group">
+                <label for="title" class="mr-2">Nombre de usuario: </label>
+                <input type="text" name="titulo" class="form-control" required placerholder="Ingrese el nombre">
+            </div>
+
+
+            <div class="col d-flex justify-content-center">
+                <button class="btn btn-sm " type="submit"> Registrarse</button>
+            </div> {% endcomment %}
+            <div class="col d-flex justify-content-center mb-2">
+                <button class="btn mt-3 " type="submit">Registrarse</button>
+
+            </div>
+            <div class="col d-flex justify-content-center">
+                <p>¿Ya tienes cuenta? <a href=" {% url 'login' %} ">Inicia sesión</a></p>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+</div>
+
+
+
+{% endblock content %}

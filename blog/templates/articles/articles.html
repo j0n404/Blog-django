@@ -1,0 +1,30 @@
+{% for article in articles %}
+        <div class="card mb-3 mt-4">
+            <a href=" {% url 'article' article.id %} " class="text-dark">
+                <h5 class="card-header ">{{article.title}}</h5>
+            </a>
+            
+            <div class="card-body row d-flex carta">
+                <div class="col-lg-4 col-12">
+                    <img src="{{article.image.url}}" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-8 col-12">
+                    <p class="card-text"> {{article.description|safe}} </p>
+                    <a href=" {% url 'article' article.id %} " class="btn btn" style="background-color: #42a096; color:white;">Ir al articulo</a>
+
+                    <hr>
+                    {% for category in article.categories.all %}
+                    <a href=" {% url 'category' category.id %} " class="badge badge badge-warning ">{{category}}</a>
+                    {% endfor %}
+
+                    <div class="text-muted mt-2">
+                        <small><span>Creado el: {{article.created_at}}</span></small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}

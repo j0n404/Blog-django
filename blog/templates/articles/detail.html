@@ -1,0 +1,25 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title %}
+{{article.title}}
+{% endblock title %}
+
+{% block content %}
+<div class="row p-3">
+    <div class="col">
+        <h3 class="">{{article.title}}</h3>
+        {% if article.image != 'null' %}
+        <div class="text-center col p-4">
+            <img class="img-fluid" src="{{article.image.url}}" alt="">
+        </div>
+
+        {% endif %}
+
+
+
+        <p>{{article.content|safe}}</p>
+        <span> <small class="text-muted">Creado el: {{article.created_at}}</small> </span>
+
+    </div>
+</div>
+{% endblock content %}

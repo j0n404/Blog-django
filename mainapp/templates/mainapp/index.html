@@ -1,0 +1,30 @@
+{% extends 'layouts/layout.html' %}
+{% block title %}
+Inicio
+{% endblock title %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        {% if user.is_authenticated %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="col-6 p-3 alert alert-success">
+                        <p>{{message}}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <h2>Bienvenid@, {{request.user.first_name}}</h2>
+        {% else %}
+        Registrate para ver mas contenido.
+
+        {% endif %}
+
+    </div>
+    <div class="col">
+        
+    </div>
+</div>
+{% endblock content %}

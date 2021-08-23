@@ -1,0 +1,18 @@
+{% extends 'layouts/layout.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock title %}
+
+{% block content %}
+
+<div class="row carta">
+    <div class="col ml-3 ">
+        <h3>{{title}}</h3>
+<hr>
+        {% include 'articles/articles.html' %}
+
+        {% include 'articles/pagination.html' %}
+    </div>
+</div>
+
+
+{% endblock content %}

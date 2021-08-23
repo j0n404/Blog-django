@@ -1,0 +1,47 @@
+.formu-create-article button {
+    color: white;
+    background-color: #42a096;
+    text-align: center;
+    width: 150px;
+}
+
+.formu-create-article button:hover {
+    color: white;
+    background-color: #317971;
+}
+
+.formu-create-article input {
+    width: 85%;
+
+}
+
+.formu-create-article textarea {
+    border-radius: 0%;
+    max-height: 175px;
+}
+
+.formu-create-article h3 {
+    color: white;
+    padding-top: 25px;
+    height: 100px;
+    width: 100%;
+    background-color: #29a193;
+    margin-bottom: 0%;
+    box-sizing: border-box;
+    box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    border-end-end-radius: 0px;
+}
+
+.formu-create-article form {
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.formu-create-article #btnCancelar {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}

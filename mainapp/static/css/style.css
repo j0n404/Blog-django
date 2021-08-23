@@ -1,0 +1,110 @@
+/* Estilos generales */
+
+
+body{
+    background-color: #f2f2f2;
+}
+
+/* estilos header */
+header{
+    background-color: #23282B;
+    height: 120px;
+}
+#logotipo h4{
+    text-align: center;
+    display: block;
+    letter-spacing: 2px;
+    float: left;
+    margin: 30px;
+    font-weight: normal;
+    color: #42a096;
+}
+#logotipo{
+    width: 60%;
+    height: 100px;
+    margin: 0 auto;
+}
+#logotipo img{
+    display: block;
+    width: 60px;
+    float: left;
+    margin-top: 20px;
+
+}
+
+
+/* NAV */
+
+
+.xd{
+    background-color: #42a096;
+}
+
+.mi-nav a{
+    color: white;
+    padding: 15px;
+}
+.mi-nav a:hover{
+    background: #42a096;
+    transition: all 340ms;
+}
+.formu button{
+    background: #42a096;
+    color: white;
+}
+
+.formu button:hover{
+    background: #42a096;
+}
+
+
+
+
+
+.formu-create-article button {
+    color: white;
+    background-color: #42a096;
+    text-align: center;
+    width: 150px;
+}
+
+.formu-create-article button:hover {
+    color: white;
+    background-color: #317971;
+}
+
+.formu-create-article input {
+    width: 100%;
+
+}
+
+.formu-create-article textarea {
+    border-radius: 0%;
+    max-height: 175px;
+}
+
+.formu-create-article h3 {
+    color: white;
+    padding-top: 25px;
+    height: 100px;
+    width: 100%;
+    background-color: #29a193;
+    margin-bottom: 0%;
+    box-sizing: border-box;
+    box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    border-end-end-radius: 0px;
+}
+
+.formu-create-article form {
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.formu-create-article #btnCancelar {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
